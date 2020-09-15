@@ -1,7 +1,5 @@
 package math;
 
-import java.util.Arrays;
-
 public class Formula {
     /**
      * 삼각수

@@ -34,4 +34,22 @@ class FormulaTest {
         assertEquals(120, formula.getFactorial(5));
         assertEquals(738197504, formula.getFactorial(31));
     }
+
+    @Test
+    @DisplayName("콤비네이션")
+    void combination() {
+        assertEquals(1, formula.getCombination(0, 0));
+        assertEquals(1, formula.getCombination(3, 3));
+        assertEquals(15, formula.getCombination(6, 2));
+        assertEquals(15, formula.getCombination(6, 4));
+    }
+
+    @Test
+    @DisplayName("파스칼")
+    void pascal() {
+        int[][] pascal = formula.getPascal(5);
+        assertEquals(1, pascal[0][0]);
+        assertEquals(6, pascal[4][2]);
+        assertEquals(pascal[3][3], pascal[2][2] + pascal[2][3]);
+    }
 }

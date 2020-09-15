@@ -16,9 +16,12 @@ public class Formula {
 
     /**
      * int 사용시
-     * 자연수 n은 0 < n < 32
+     * 자연수 n은 n < 32
      */
     public int getFactorial(int n) {
+        if (n == 0) {
+            return 1;
+        }
         int factorial = n;
         for (int i = 1; i < n; i++) {
             factorial *= i;

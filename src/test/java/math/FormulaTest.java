@@ -13,7 +13,7 @@ class FormulaTest {
     Formula formula = new Formula();
 
     @Test
-    @DisplayName("삼각수 테스트")
+    @DisplayName("삼각수")
     void trigonometric() {
         assertEquals(1, formula.getTrigonometric(1));
         assertEquals(3, formula.getTrigonometric(2));
@@ -21,5 +21,11 @@ class FormulaTest {
         assertEquals(10, formula.getTrigonometric(4));
         assertEquals(15, formula.getTrigonometric(5));
 
+    }
+
+    @Test
+    @DisplayName("팩토리얼")
+    void factorial() {
+        assertEquals(1, formula.getFactorial());
     }
 }

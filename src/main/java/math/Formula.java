@@ -8,6 +8,9 @@ public class Formula {
      * 1, 3, 6, 10, 15 ..... 증가
      */
     public int getTrigonometric(int n) {
+        if (n <= 0) {
+            return 0;
+        }
         return (n * (n + 1)) / 2;
     }
 

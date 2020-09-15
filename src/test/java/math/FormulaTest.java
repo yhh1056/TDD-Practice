@@ -26,6 +26,11 @@ class FormulaTest {
     @Test
     @DisplayName("팩토리얼")
     void factorial() {
-        assertEquals(1, formula.getFactorial());
+        assertEquals(1, formula.getFactorial(1));
+        assertEquals(2, formula.getFactorial(2));
+        assertEquals(6, formula.getFactorial(3));
+        assertEquals(24, formula.getFactorial(4));
+        assertEquals(120, formula.getFactorial(5));
+        assertEquals(738197504, formula.getFactorial(31));
     }
 }

@@ -122,4 +122,12 @@ public class MethodTest {
         assertEquals(5, arrays.size());
         assertEquals(0, arrays.get(1));
     }
+    
+    @Test
+    void MathSqrt() {
+        assertEquals(2.0, Math.sqrt(4));
+        assertEquals(1.4142135623730951, Math.sqrt(2));
+    }
+        
+        
 }

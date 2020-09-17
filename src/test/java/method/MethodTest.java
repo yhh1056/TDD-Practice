@@ -86,6 +86,40 @@ public class MethodTest {
         //then
 
         assertEquals(-1, min);
+    }
 
+    @Test
+    void CollectionMax() {
+        //given
+        List<Integer> arrays = new ArrayList<>();
+        arrays.add(6);
+        arrays.add(4);
+        arrays.add(0);
+        arrays.add(1);
+        arrays.add(2);
+        arrays.add(-1);
+        //when
+        Integer min = Collections.max(arrays);
+        //then
+
+        assertEquals(6, min);
+    }
+
+    @Test
+    void listRemoveToInteger() {
+        //given
+        List<Integer> arrays = new ArrayList<>();
+        arrays.add(6);
+        arrays.add(4);
+        arrays.add(0);
+        arrays.add(1);
+        arrays.add(2);
+        arrays.add(-1);
+        //when
+        arrays.remove((Integer) 4);
+        //then
+
+        assertEquals(5, arrays.size());
+        assertEquals(0, arrays.get(1));
     }
 }

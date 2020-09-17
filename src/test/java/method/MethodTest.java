@@ -135,6 +135,12 @@ public class MethodTest {
         assertEquals(27, Math.pow(3, 3));
         assertEquals(1.0, Math.pow(3, 0));
     }
-        
-        
+
+    @Test
+    void MathFloor() {
+        assertEquals(4.0, Math.floor(4.213213));
+        assertEquals(3.0, Math.floor(3.1111));
+        assertEquals(3.0, Math.floor(3.9999));
+    }
+
 }

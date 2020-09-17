@@ -2,9 +2,7 @@ package method;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -64,12 +62,30 @@ public class MethodTest {
     @Test
     void findMaxValueIndex() {
         //given
-        int[] a = new int[]{1, 6, 2, 7, 8};
+        int[] arr = new int[]{1, 6, 2, 7, 8};
         //when
-        int[] sortedIndices = IntStream.range(0, a.length)
-                .boxed().sorted(Comparator.comparingInt(i -> a[i]))
+        int[] sortedIndices = IntStream.range(0, arr.length)
+                .boxed().sorted(Comparator.comparingInt(i -> arr[i]))
                 .mapToInt(ele -> ele).toArray();
         //then
         assertArrayEquals(new int[]{0, 2, 1, 3, 4}, sortedIndices);
+    }
+
+    @Test
+    void CollectionMin() {
+        //given
+        List<Integer> arrays = new ArrayList<>();
+        arrays.add(6);
+        arrays.add(4);
+        arrays.add(0);
+        arrays.add(1);
+        arrays.add(2);
+        arrays.add(-1);
+        //when
+        Integer min = Collections.min(arrays);
+        //then
+
+        assertEquals(-1, min);
+
     }
 }

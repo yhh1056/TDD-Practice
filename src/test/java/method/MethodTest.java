@@ -22,20 +22,6 @@ public class MethodTest {
     }
 
     @Test
-    void splitString() {
-        String string = "abcdef";
-        String hasSpecialCharacters = "ab:cd,ef";
-
-        assertArrayEquals(new String[]{"a", "b", "c", "d", "e", "f"}, string.split(""));
-        assertArrayEquals(new String[]{"ab", "def"}, string.split("c"));
-
-        assertArrayEquals(new String[]{}, string.split("abcdef"));
-        assertEquals(0, string.split("abcdef").length);
-
-        assertArrayEquals(new String[]{"ab", "cd", "ef"}, hasSpecialCharacters.split("[:,]"));
-    }
-
-    @Test
     void toCharArray() {
         String string = "hello";
         char[] chars = new char[]{'h', 'e', 'l', 'l', 'o'};

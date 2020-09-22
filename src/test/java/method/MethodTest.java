@@ -109,24 +109,4 @@ public class MethodTest {
         assertEquals(0, arrays.get(1));
     }
 
-    @Test
-    void MathSqrt() {
-        assertEquals(2.0, Math.sqrt(4));
-        assertEquals(1.4142135623730951, Math.sqrt(2));
-    }
-
-    @Test
-    void MathPow() {
-        assertEquals(16.0, Math.pow(4, 2));
-        assertEquals(27, Math.pow(3, 3));
-        assertEquals(1.0, Math.pow(3, 0));
-    }
-
-    @Test
-    void MathFloor() {
-        assertEquals(4.0, Math.floor(4.213213));
-        assertEquals(3.0, Math.floor(3.1111));
-        assertEquals(3.0, Math.floor(3.9999));
-    }
-
 }
